@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //Enter Inputs
+    double sales, commission;
+    
+    //Fixed Point Notation with Two Decimal Places
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    
+    //Enter sales
+    cout << "\nEnter Quarterly Sales: $";
+    cin >> sales;
+    
+    //If-else statements
+    
+    //If quarterly sales is >= 0 and <= 20000
+    if (sales >= 0 && sales <= 20000)
+    {
+        cout << "\nCommission: $" << (commission = sales * 0.05) << endl;
+    }
+    
+    //If quarterly sales is >= 20001 and <= 50000
+    else if (sales >= 20001 && sales <= 50000)
+    {
+        cout << "\nCommission: $" << (commission = sales * 0.07 + 1000) << endl;
+    }
+    
+    //If quarterly sales is >= 50001
+    else if (sales >= 50001)
+    {
+        cout << "\nCommission: $" << (commission = sales * 0.10 + 3100);
+    }
+    
+    //If quarterly sales is < 0
+    else if (sales < 0)
+    {
+        cout << "Error";
+    }
+    
+    return 0;
+}
